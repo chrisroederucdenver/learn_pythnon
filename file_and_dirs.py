@@ -38,6 +38,10 @@ if (1):
             print(f"origfile tempfile:{orig}\n")
             shutil.copyfileobj(orig, temp)
             temp.flush()
+        print(type(temp))
         print(temp.name)
         print(os.stat(temp.name))
+        ## XXX print(os.stat(temp))
+        #   TypeError: stat: path should be string, bytes, os.PathLike or integer, not _TemporaryFileWrapper
+        ## XXX print(os.stat(orig))
 
